@@ -1,5 +1,6 @@
 #multiple assignment
 
+from sys import exception
 from xml.etree.ElementPath import find
 
 
@@ -208,7 +209,7 @@ class Person :
 
 
 p1 = Person("Bob", 21)
-print(p.getName())
+print(p1.getName())
 
 #class inheritance 
 class Car:
@@ -228,3 +229,27 @@ class SportsCar(Car):
         print("The sports car is driving.")
 
 mySportsCar = SportsCar()
+
+
+#my product of array w/ index as exception leetcode answer
+def productofarray (arr):
+    product_arr = []
+    for i in range(len(arr)):
+        product = 1
+        j = 0
+        while j < len(arr):
+            if j != i:
+                product *= arr[j]
+            j += 1
+        product_arr.append(product)
+    return print(product_arr)    
+
+productofarray([0, 2, 2, 2])
+
+#the actual answer 
+
+
+
+
+    
+
