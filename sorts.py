@@ -12,7 +12,7 @@ a=[3,8,9,5,4,2,1]
 print(insertionSort(a))
 
 def selectionSort(a, n):
-      for i in range(1, n-1):   #c1= n
+      for i in range(0, n-1):   #c1= n-1
             smallest= i         #c2 = n-1
             for j in range (i+1, n):   #t3=(j)
                   if a[j] < a[smallest]:  #t4=(j-1)
@@ -26,36 +26,14 @@ a=[3,8,9,5,4,2,1]
 n=len(a)
 print(selectionSort(a,n))
 
-def mergeSort(a,p,r):
-     if p < r:
-          q=[(p+r)/2]
-          mergeSort(a,p,q)
-          mergeSort(a,q+1,r)
-          merge(a,p,q,r)
 
-def merge(a,p,q,r):
-     n1=q-p+1
-     n2=r-q
-     l=[0]*n1
-     m=[0]*n2
-     for i in range (n1):
-          l[i]=a[p+i-1]
-     for j in range (n2):
-          m[j]=a[q+j]
-    
-     i=1
-     j=1
-
-     for k in range (p,r):
-          if l[i]<= m[j]:
-               a[k] = l[i]
-               i=i+1
-          else:
-               a[k]=m[j]
-               j=j+1
      
 
 a=[3,8,9,5,4,2,1]
-p=0
-r=len(a)-1
-print(mergeSort(a,p,r))
+
+print("PRINT VALS")
+
+
+
+for i in range (len(a)):
+     print(a[i])
