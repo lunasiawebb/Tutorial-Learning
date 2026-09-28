@@ -22,7 +22,7 @@ class Tarot:
 
         return card + " facing " + cardDirection
 
-
+def drawdeck(size):
 
 
 if __name__=="__main__":
