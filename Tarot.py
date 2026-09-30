@@ -22,9 +22,18 @@ class Tarot:
 
         return card + " facing " + cardDirection
 
-def drawdeck(size):
-
+    def drawDeck(self):
+        deck=[]
+        size=int(input("How many cards would you like in your deck?"))
+        cards=Tarot()
+        for i in range (0,size):
+            card=cards.getCard()
+            while card in deck:
+                card=cards.getCard()
+            deck.append(card)
+        return deck
 
 if __name__=="__main__":
-    cards = Tarot()
-    print(cards.getCard())
+    
+    cards=Tarot()
+    print(cards.drawDeck())
