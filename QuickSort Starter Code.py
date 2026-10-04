@@ -31,7 +31,7 @@ def RandomElementQuickSort(a,p,r):
         temp=a[r]
         a[r]=a[rd]
         a[rd]=temp
-        q= RandomElementPartition(a,p,r)
+        q=RandomElementPartition(a,p,r)
         RandomElementQuickSort(a,p,q-1)
         RandomElementQuickSort(a,q+1,r)
     return a
